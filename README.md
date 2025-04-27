@@ -31,6 +31,37 @@
 ## About the Project
 Team DataMed's submission for the 2025 Datathon hosted by DubsTech at the University of Washington. We have chosen the prompt of **Health: Drug Overdose in USA** on the Machine Learning track.
 
+### Summary of the Project
+
+We focused on Health: Analyzing the New York State of Health as our prompt for the Datathon. We used the dataset provided by the prompt to analyze the data and build multimple machine learning models to:
+
+- Predict the following for a Specific Hospital and DRG Type for the next 1 year:
+  - Discharges
+  - Median Costs
+  - Median Charges
+- Predict the total expected discharges for each DRG Type for the State of New York
+- Predict the mean cost of a discharge using features like:
+  - Hospital
+  - APR DRG code
+  - Severity of illness
+  - Year
+  - Medical/Surgical classification.
+
+
+#### 1. `meancost.ipynb`
+**Mean Cost Prediction of Inpatient Discharges**
+This notebook predicts the *Mean Cost* of inpatient hospital discharges based on historical data. It uses features like Facility Name, APR DRG Code, Severity of Illness, and Medical/Surgical Description. Several machine learning models are trained, including Linear Regression, Decision Trees, Random Forests, and XGBoost, to identify trends and minimize discharge costs. The goal is to deliver actionable insights for hospital cost management.
+
+#### 2. `drg_discharge_pred.ipynb`
+**DRG Discharge Volume Prediction for New York State**
+This notebook forecasts the *total expected discharges* for each Diagnosis-Related Group (DRG) type across New York State. After cleaning and preparing the dataset, it applies machine learning models such as Random Forest, Prophet, XGBoost, and LightGBM. Model performance is evaluated using MAE and RMSE to select the best discharge prediction approach, supporting resource and capacity planning in healthcare settings.
+
+#### 3. `1yearpred.ipynb`
+**One-Year Forecast of Hospital Metrics**
+This notebook predicts three key metrics, *Discharges*, *Median Costs*, and *Median Charges*, for the next year for a specific hospital and DRG type. Time series models (ARIMA and Auto-ARIMA) are employed to understand historical trends and generate reliable forecasts. These insights assist hospitals in strategic planning, budgeting, and operational management.
+
+
+
 ### Built With
 [![Python][python-shield]][python-url]
 [![pandas-shield]][pandas-url]
